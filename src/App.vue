@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Blog from "./components/Blog/Blog";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Blog from "./components/Blog";
 export default {
   name: "App",
   components: { Blog, Footer, Header },
