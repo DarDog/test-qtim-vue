@@ -3,6 +3,7 @@
     <div class="container">
       <Header/>
       <Blog />
+      <Post />
     </div>
     <Footer />
   </div>
@@ -12,9 +13,10 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Blog from "./components/Blog";
+import Post from "./components/Post";
 export default {
   name: "App",
-  components: { Blog, Footer, Header },
+  components: { Post, Blog, Footer, Header },
 };
 </script>
 
