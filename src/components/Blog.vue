@@ -5,7 +5,7 @@
         <div class="grid portfoliogrid posts">
           <Card v-for="post in currentPosts" :key="post.id" :post="post" />
         </div>
-        <Pagination :posts="posts" :onChange="handleChangePage" :page="currentPage" />
+        <Pagination v-if="posts.length" :posts="posts" :onChange="handleChangePage" :page="currentPage" />
         <div class="clearfix"></div>
         <nav class="pagination"></nav>
       </main>

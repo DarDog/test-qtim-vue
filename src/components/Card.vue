@@ -2,8 +2,8 @@
   <article class="hentry card">
     <header class="entry-header">
       <h1 class="entry-title">
-        <a href="blog-single.html" rel="bookmark"
-        >{{ post.title }}</a
+        <router-link :to="{ name: 'post', params: { id: post.id } }" rel="bookmark"
+        >{{ post.title }}</router-link
         >
       </h1>
       <div class="entry-thumbnail">
@@ -16,7 +16,7 @@
     <div class="entry-summary">
       <p>
         {{ post.preview }}
-        <a class="more-link" href="blog-single.html">Read more</a>
+        <router-link :to="{ name: 'post', params: { id: post.id } }" class="more-link">Read more</router-link>
       </p>
     </div>
     <footer class="entry-footer">

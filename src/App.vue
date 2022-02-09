@@ -2,8 +2,7 @@
   <div id="page">
     <div class="container">
       <Header/>
-      <Blog />
-      <Post />
+      <router-view></router-view>
     </div>
     <Footer />
   </div>
@@ -12,11 +11,9 @@
 <script>
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Blog from "./components/Blog";
-import Post from "./components/Post";
 export default {
   name: "App",
-  components: { Post, Blog, Footer, Header },
+  components: { Footer, Header },
 };
 </script>
 
