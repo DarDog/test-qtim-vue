@@ -1,24 +1,28 @@
-# test-qtim-vue
+# Тестовое задание для QTIM
 
-## Project setup
-```
-yarn install
-```
+## Реализация
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+В данном проекте реализованы:
+* [X] Подключение к API для получения статей
+* [X] Вывод списка статей блога
+* [X] Пагинация на фронтовой части
+* [X] Переход на детальную страницу
 
-### Compiles and minifies for production
-```
-yarn build
-```
+С использование Vue.js
 
-### Lints and fixes files
-```
-yarn lint
-```
+Проект основан на бесплатном [макете](https://www.free-css.com/free-css-templates/page263/moschino)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Запуск
+
+Для запуска вам потребуется:
+* Клонировать репозиторий
+
+        git clone git@github.com:DarDog/test-qtim.git
+
+* Перейти в директорию проекта и запустить локальный сервер
+
+        cd {project-name}
+        npm run serve
+        // локальный сервер запускается на 8000 порте
+
+* Так же вы можете посмотреть на [Gh-pages](https://dardog.github.io/test-qtim-vue) 
