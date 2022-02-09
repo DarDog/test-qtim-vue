@@ -3,7 +3,7 @@
     <div id="primary" class="content-area column full">
       <main id="main" class="site-main" role="main">
         <div class="grid portfoliogrid posts">
-          <Post v-for="post in currentPosts" :key="post.id" :post="post" />
+          <Card v-for="post in currentPosts" :key="post.id" :post="post" />
         </div>
         <Pagination :posts="posts" :onChange="handleChangePage" :page="currentPage" />
         <div class="clearfix"></div>
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-  import Post from "./Post";
+  import Card from "./Card";
   import { mockupApi } from "../api/Mockup";
   import Pagination from "./Pagination";
 
 
   export default {
     name: "Blog",
-    components: { Pagination, Post },
+    components: { Pagination, Card },
 
     data () {
       return {
