@@ -5,6 +5,7 @@
         <div class="grid portfoliogrid posts">
           <Post v-for="post in posts" :key="post.id" :post="post" />
         </div>
+        <Pagination :posts="posts" :onChange="handleChangePage" :page="currentPage" />
         <div class="clearfix"></div>
         <nav class="pagination"></nav>
       </main>
@@ -16,15 +17,17 @@
 <script>
   import Post from "./Post";
   import { mockupApi } from "../api/Mockup";
+  import Pagination from "./Pagination";
 
 
   export default {
     name: "Blog",
-    components: { Post },
+    components: { Pagination, Post },
 
     data () {
       return {
-        posts: []
+        posts: [],
+        currentPage: 1
       }
     },
 
@@ -37,6 +40,10 @@
         .catch(err => {
           console.error(err);
         })
+      },
+
+      handleChangePage(newPage) {
+        this.currentPage = newPage;
       }
     },
 

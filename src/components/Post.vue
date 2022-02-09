@@ -6,16 +6,6 @@
         >{{ post.title }}</a
         >
       </h1>
-      <div class="entry-meta">
-                    <span class="posted-on"
-                    ><time class="entry-date published"
-                    >{{ post.createdAt }}</time
-                    ></span
-                    >
-        <span class="comments-link"
-        ><a href="#">Leave a comment</a></span
-        >
-      </div>
       <div class="entry-thumbnail">
         <img
           :src="post.image"
