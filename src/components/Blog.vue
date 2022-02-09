@@ -3,7 +3,7 @@
     <div id="primary" class="content-area column full">
       <main id="main" class="site-main" role="main">
         <div class="grid portfoliogrid posts">
-          <Post v-for="post in posts" :key="post.id" :post="post" />
+          <Post v-for="post in currentPosts" :key="post.id" :post="post" />
         </div>
         <Pagination :posts="posts" :onChange="handleChangePage" :page="currentPage" />
         <div class="clearfix"></div>
@@ -27,7 +27,8 @@
     data () {
       return {
         posts: [],
-        currentPage: 1
+        currentPage: 1,
+        currentPosts: [],
       }
     },
 
@@ -36,6 +37,7 @@
         mockupApi.getPosts()
         .then(posts => {
           this.posts = posts;
+          this.getCurrentPosts(this.currentPage, posts)
         })
         .catch(err => {
           console.error(err);
@@ -44,6 +46,14 @@
 
       handleChangePage(newPage) {
         this.currentPage = newPage;
+        this.getCurrentPosts(this.currentPage, this.posts);
+      },
+
+      getCurrentPosts(currentPage, posts) {
+        const sliceStart = ( currentPage - 1 ) * 6;
+        const lastMoviesIndex = currentPage * 6;
+
+        this.currentPosts = posts.slice(sliceStart, lastMoviesIndex);
       }
     },
 
